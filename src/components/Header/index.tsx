@@ -1,63 +1,32 @@
-//import { useState } from "react";
+import { Link } from "react-router-dom"
 import style from "./style.module.css"
-// import SwitchTheme from "../SwitchTheme";
-
-// function HomePage() {
-//   return <h2>Главная страница</h2>;
-// }
-
-// function AboutPage() {
-//   return <h2>О нас</h2>;
-// }
-
-// function ContactPage() {
-//   return <h2>Контакты</h2>;
-// }
 
 const Header = () => {
 
-    // const [currentPage, setCurrentPage] = useState('home');
-
-    // const renderPage = () => {
-    //     switch (currentPage) {
-    //       case 'home':
-    //         return <HomePage />;
-    //       case 'about':
-    //         return <AboutPage />;
-    //       case 'contact':
-    //         return <ContactPage />;
-    //       default:
-    //         return <HomePage />;
-    //     }
-    //   };
 
     return(
         <header className={style.header}>
-            <div className={style.logo}>
+            <Link to='/' className={style.logo}>
                 <span>{'{Vantengu/}'}</span>
-            </div>
+            </Link>
             <nav className={style.nav}>
-                <a onClick={() => setCurrentPage('home')}>Home</a>
-                <a onClick={() => setCurrentPage('about')}>About Me</a>
-                <a onClick={() => setCurrentPage('technology')}>Technologes</a>
-                <a onClick={() => setCurrentPage('project')}>Projects</a>
-                {/* <SwitchTheme /> */}
+                <Link to='/'>Home</Link>
+                <Link to='/about'>About Me</Link>
+                <Link to='/technology'>Technologes</Link>
+                <Link to='/project'>Projects</Link>
             </nav>
             <nav className={style.menu__burger}>
                 <button className={style.burger}></button>
                 <div className={style.menu__mobile}>
-                    <a onClick={() => setCurrentPage('home')}>Home</a>
-                    <a onClick={() => setCurrentPage('about')}>About Me</a>
-                    <a onClick={() => setCurrentPage('technology')}>Technologes</a>
-                    <a onClick={() => setCurrentPage('project')}>Projects</a>
-                    {/* <SwitchTheme /> */}
+                    <Link to='/'>Home</Link>
+                    <Link to='/about'>About Me</Link>
+                    <Link to='/technology'>Technologes</Link>
+                    <Link to='/project'>Projects</Link>
                 </div>
             </nav>
             <div className={style.socialsBlock}>
                 <button className={style.socials}>Contact Me</button>
             </div>
-            {/* Отображение текущей страницы
-            <div>{renderPage()}</div> */}
         </header>
     );
 };
