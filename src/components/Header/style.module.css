@@ -11,6 +11,7 @@
     width: 1920px;
     padding: 0 125px 0 125px;
     background: var(--background-primary);
+    transition: 0.6s linear;
     z-index: 10000;
     border-bottom: 1px solid var(--primary-color);
 }

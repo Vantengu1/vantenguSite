@@ -52,6 +52,7 @@ body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     background: var(--background-primary);
+    transition: 0.6s linear;
 }
 
 .app {
